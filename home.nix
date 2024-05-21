@@ -39,6 +39,12 @@
   };
   
   programs = {
+    gnome-shell = {
+      enable = true;
+      # extensions = with pkgs.gnomeExtensions; [
+      #  dash-to-panel
+      # ];
+    };
     home-manager.enable = true;
     alacritty = {
       enable = true;
@@ -133,12 +139,6 @@
       };
     };
   };
-  services = {
-    syncthing = {
-      enable = true;
-    };
-  };
-
   home.packages = with pkgs; [
     gh
     bat # better cat
