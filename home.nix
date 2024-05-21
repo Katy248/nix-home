@@ -45,6 +45,32 @@
       userName = "Katy248";
       userEmail = "petrovanton247@gmail.com";
     };
+    zsh = {
+      enable = true;
+      antidote = {
+        enable = true;
+      };
+      autosuggestion = {
+        enable = true;
+      };
+      oh-my-zsh = {
+        enable = true;
+        plugins = [
+          "git" "sudo"
+        ];
+      };
+      shellAliases = {
+        ls = "eza --tree --level=1 --icons=always --color=always --all --group-directories-first";
+        cat = "bat --theme gruvbox --paging never --number";
+      };
+    };
+    oh-my-posh = {
+      enable = true;
+      useTheme = "gruvbox";
+
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
     helix = {
       enable = true;
       defaultEditor = true;
@@ -69,7 +95,9 @@
 
   home.packages = with pkgs; [
     gh
-    
+    bat # better cat
+    eza # better ls
     nil marksman omnisharp-roslyn # language servers
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 }
