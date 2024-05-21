@@ -61,7 +61,7 @@
       };
       shellAliases = {
         ls = "eza --tree --level=1 --icons=always --color=always --all --group-directories-first";
-        cat = "bat --theme gruvbox --paging never --number";
+        cat = "bat --theme gruvbox-dark --paging never --number";
       };
     };
     oh-my-posh = {
