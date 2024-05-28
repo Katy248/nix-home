@@ -62,7 +62,7 @@
         };
         font = {
           size = 11;
-          normal.family = "JetBrainsMono NL";
+          normal.family = "JetBrainsMonoNF";
         };
         colors = {
           primary = {
@@ -143,6 +143,9 @@
     gh
     bat # better cat
     eza # better ls
+
+    pandoc texliveFull # documents
+    
     nil marksman omnisharp-roslyn # language servers
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
