@@ -27,17 +27,6 @@
     sessionVariables = {};
   };
 
-  gtk = {
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus";
-    };
-    theme = {
-      name = "Adw-gtk3";
-      package = pkgs.adw-gtk3;
-    };
-  };
-  
   programs = {
     gnome-shell = {
       enable = true;
@@ -105,6 +94,13 @@
       autosuggestion = {
         enable = true;
       };
+      history = {
+        ignoreAllDups = true;
+        ignoreDups = true;
+        ignoreSpace = true;
+        share = true;
+        size = 5000;
+      };
       oh-my-zsh = {
         enable = true;
         plugins = [
@@ -131,10 +127,22 @@
       ];
       settings = {
         theme = "gruvbox";
-        editor.cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
+        editor = {
+          color-modes = true;
+          popup-border = "all";
+          cursor-shape = {
+            normal = "block";
+            insert = "bar";
+            select = "underline";
+          };
+          lsp = {
+            display-messages = true;
+          };
+          indent-guides = {
+            render = true;
+            character = "┆";
+            skip-levels = 1;
+          };
         };
       };
     };
@@ -148,5 +156,6 @@
     
     nil marksman omnisharp-roslyn # language servers
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    alacritty
   ];
 }
