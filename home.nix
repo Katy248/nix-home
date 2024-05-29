@@ -143,6 +143,16 @@
             character = "┆";
             skip-levels = 1;
           };
+          statusline = {
+            mode = {
+              normal = "NORMAL";
+              insert = "INSERT";
+              select = "SELECT";
+            };
+            left = ["file-name" "file-modification-indicator" "separator" "file-type"];
+            center = ["mode"];
+            right = ["version-control" "workspace-diagnostics" "position"];
+          };
         };
       };
     };
@@ -152,7 +162,7 @@
     bat # better cat
     eza # better ls
 
-    pandoc texliveFull # documents
+    # pandoc texliveFull # documents
     
     nil marksman omnisharp-roslyn # language servers
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
