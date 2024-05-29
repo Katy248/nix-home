@@ -48,6 +48,7 @@
           title = "Terminal";
           padding = { x = 10; y = 10; };
           opacity = 0.9;
+          blur = true;
         };
         font = {
           size = 11;
