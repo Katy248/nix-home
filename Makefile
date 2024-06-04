@@ -19,5 +19,10 @@ install:
 	@nix-channel --update
 	@nix-shell '<home-manager>' -A install
 
+upgrade:
+	nix-channel --update
+	nix-env --upgrade
+	home-manager switch
+
 help:
 	@echo "Run \`make stow\` to copy all needed files"

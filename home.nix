@@ -16,7 +16,7 @@
   home = {
     username = "katy";
     homeDirectory = "/home/katy";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
     language = let
       russian = "ru_RU.UTF-8";
       english = "en_US.UTF-8";
@@ -32,6 +32,21 @@
       time = russian;
     };
     sessionVariables = { };
+    packages = with pkgs; [
+      gh
+      bat # better cat
+      eza # better ls
+      figlet # write big ascii text
+
+      # pandoc texliveFull # documents
+
+      nil
+      marksman
+      omnisharp-roslyn
+      nixfmt # language servers
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      alacritty
+    ];
   };
 
   programs = {
@@ -46,19 +61,4 @@
     };
 
   };
-  home.packages = with pkgs; [
-    gh
-    bat # better cat
-    eza # better ls
-    figlet # write big ascii text
-
-    # pandoc texliveFull # documents
-
-    nil
-    marksman
-    omnisharp-roslyn
-    nixfmt # language servers
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    alacritty
-  ];
 }
