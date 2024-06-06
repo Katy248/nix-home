@@ -24,3 +24,7 @@ upgrade:
 
 help:
 	@echo "Run \`make stow\` to copy all needed files"
+
+gc:
+	nix-env --delete-generations old
+	nix-store --gc	
