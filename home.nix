@@ -8,6 +8,7 @@
     ./programs/helix.nix
     ./programs/oh-my-posh.nix
     ./programs/zsh.nix
+    ./programs/vscode.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -43,9 +44,11 @@
       nil
       marksman
       omnisharp-roslyn
+      just
       nixfmt # language servers
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       alacritty
+      telegram-desktop
     ];
   };
 
