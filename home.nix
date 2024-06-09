@@ -8,7 +8,7 @@
     ./programs/helix.nix
     ./programs/oh-my-posh.nix
     ./programs/zsh.nix
-    ./programs/vscode.nix
+    # ./programs/vscode.nix
   ];
   nix = {
     package = pkgs.nix;
