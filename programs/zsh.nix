@@ -16,7 +16,7 @@
     };
     shellAliases = {
       ls =
-        "eza --tree --level=1 --icons=always --color=always --all --group-directories-first";
+        "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
       cat = "bat --theme gruvbox-dark --paging never --number";
     };
   };
