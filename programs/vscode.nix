@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [ 
+    extensions = with pkgs.vscode-extensions; [
       # Spell cheker
       streetsidesoftware.code-spell-checker
       # Themes

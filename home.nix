@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
 
@@ -8,6 +8,7 @@
     ./programs/helix.nix
     ./programs/oh-my-posh.nix
     ./programs/zsh.nix
+    ./programs/ags.nix
     # ./programs/vscode.nix
   ];
   nix = {
@@ -48,7 +49,7 @@
       nixfmt # language servers
 
       fastfetch
-      
+
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       alacritty
       telegram-desktop

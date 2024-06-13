@@ -11,19 +11,19 @@
   };
 
   outputs = { home-manager, nixpkgs, ... }@inputs:
-  let
-    username = "katy";
-    system = "x86_64-linux";
-  in
-  {
-    homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs { inherit system; };
+    let
+      username = "katy";
+      system = "x86_64-linux";
+    in {
+      homeConfigurations."${username}" =
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs { inherit system; };
 
-      # pass inputs as specialArgs
-      extraSpecialArgs = { inherit inputs; };
+          # pass inputs as specialArgs
+          extraSpecialArgs = { inherit inputs; };
 
-      # import your home.nix
-      modules = [ ./home.nix ];
+          # import your home.nix
+          modules = [ ./home.nix ];
+        };
     };
-  };
 }
