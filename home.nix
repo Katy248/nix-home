@@ -46,6 +46,9 @@
       omnisharp-roslyn
       just
       nixfmt # language servers
+
+      fastfetch
+      
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       alacritty
       telegram-desktop
