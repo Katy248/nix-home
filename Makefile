@@ -20,11 +20,15 @@ install:
 upgrade:
 	@nix-channel --update
 	@nix-env --upgrade
+	@nix flakes update
 	@home-manager switch
 
 help:
 	@echo "Run \`make stow\` to copy all needed files"
+	@echo "\`install\` to install nix and home-manager"
+	@echo "\`upgrade\` to upgrade home-manager"
+	@echo "\`gc\` to clear all orphans"
 
 gc:
-	nix-env --delete-generations old
-	nix-store --gc	
+	@nix-env --delete-generations old
+	@nix-store --gc	
