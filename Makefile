@@ -30,5 +30,6 @@ help:
 	@echo "\`gc\` to clear all orphans"
 
 gc:
-	@nix-env --delete-generations old
+	@home-manager expire-generations -2days
+	@nix-env --delete-generations 2d
 	@nix-store --gc	
