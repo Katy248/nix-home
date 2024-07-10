@@ -20,7 +20,7 @@ install:
 upgrade:
 	@nix-channel --update
 	@nix-env --upgrade
-	@nix flakes update
+	@nix flake update
 	@home-manager switch
 
 help:
