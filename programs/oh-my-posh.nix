@@ -7,70 +7,70 @@
     enableZshIntegration = true;
 
     settings = builtins.fromJSON ''
+    {
+      "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+      "blocks": [
         {
-          "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-          "blocks": [
-              {
-                  "type": "prompt",
-                  "newline": true,
-                  "alignment": "left",
-                  "overflow": "hide",
-                  "segments": [
-                      {
-                          "template": "{{if .SSHSession}}<cyan>SSH: </>{{end}}{{if .Root}}<lightRed>{{ .UserName }}</>{{else}}{{.UserName}}{{end}}<white>@</>{{ .HostName }}",
-                          "style": "plain",
-                          "type": "session",
-                          "foreground": "lightWhite"
-                      },
-                      {
-                          "type": "path",
-                          "foreground": "blue",
-                          "properties": {
-                              "style": "full"
-                          }
-                      },
-                      {
-                          "type": "git",
-                          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
-                          "foreground":"green",
-                          "foreground_templates": [
-                            "{{ if .Working.Changed }}yellow{{ end }}"
-                          ],
-                          "properties": {
-                              "branch_icon": "",
-                              "style": "full"
-                          }
-                      }
-                  ]
-              },
-              {
-                  "type": "prompt",
-                  "newline": true,
-                  "alignment": "left",
-                  "segments": [
-                      {
-                          "style": "plain",
-                          "foreground": "blue",
-                          "type": "text",
-                          "template": "-->"
-                      }
-                  ]
+          "type": "prompt",
+          "newline": true,
+          "alignment": "left",
+          "overflow": "hide",
+          "segments": [
+            {
+              "template": "{{if .SSHSession}}<cyan>SSH: </>{{end}}{{if .Root}}<lightRed>{{ .UserName }}</>{{else}}{{.UserName}}{{end}}<white>@</>{{ .HostName }}",
+              "style": "plain",
+              "type": "session",
+              "foreground": "lightWhite"
+            },
+            {
+              "type": "path",
+              "foreground": "blue",
+              "properties": {
+                "style": "full"
               }
-          ],
-          "secondary_prompt": {
-              "foreground": "lightBlue",
-              "template": "|-> "
-          },
-          "transient_prompt": {
-            "foreground": "blue",
-            "foreground_templates": [
-              "{{if eq .Code 0}}blue{{else}}red{{end}}"
-            ],
-            "template": "--> "
-          },
-          "final_space": true,
-          "version": 2
-      }
+            },
+            {
+              "type": "git",
+              "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+              "foreground":"green",
+              "foreground_templates": [
+                "{{ if .Working.Changed }}yellow{{ end }}"
+              ],
+              "properties": {
+                "branch_icon": "",
+                "style": "full"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prompt",
+          "newline": true,
+          "alignment": "left",
+          "segments": [
+            {
+              "style": "plain",
+              "foreground": "blue",
+              "type": "text",
+              "template": "-->"
+            }
+          ]
+        }
+      ],
+      "secondary_prompt": {
+        "foreground": "lightBlue",
+        "template": "|-> "
+      },
+      "transient_prompt": {
+        "foreground": "blue",
+        "foreground_templates": [
+          "{{if eq .Code 0}}blue{{else}}red{{end}}"
+        ],
+        "template": "--> "
+      },
+      "final_space": true,
+      "version": 2
+    }
     '';
 
     #settings = let
