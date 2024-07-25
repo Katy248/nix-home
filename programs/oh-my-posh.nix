@@ -17,7 +17,7 @@
                   "overflow": "hide",
                   "segments": [
                       {
-                          "template": "{{ .UserName }}@{{ .HostName }}",
+                          "template": "{{if .SSHSession}}<cyan>SSH: </.{{end}}{{if .Root}}<lightRed>{{ .UserName }}</>{{else}}{{.UserName}}{{end}}<white>@</>{{ .HostName }}",
                           "style": "plain",
                           "type": "session",
                           "foreground": "lightWhite"
@@ -31,13 +31,13 @@
                       },
                       {
                           "type": "git",
-                          "template": "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+                          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
                           "foreground":"green",
                           "foreground_templates": [
                             "{{ if .Working.Changed }}yellow{{ end }}"
                           ],
                           "properties": {
-                              "branch_icon": "",
+                              "branch_icon": "",
                               "style": "full"
                           }
                       }
