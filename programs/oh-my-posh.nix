@@ -17,7 +17,7 @@
                   "overflow": "hide",
                   "segments": [
                       {
-                          "template": "{{if .SSHSession}}<cyan>SSH: </.{{end}}{{if .Root}}<lightRed>{{ .UserName }}</>{{else}}{{.UserName}}{{end}}<white>@</>{{ .HostName }}",
+                          "template": "{{if .SSHSession}}<cyan>SSH: </>{{end}}{{if .Root}}<lightRed>{{ .UserName }}</>{{else}}{{.UserName}}{{end}}<white>@</>{{ .HostName }}",
                           "style": "plain",
                           "type": "session",
                           "foreground": "lightWhite"
