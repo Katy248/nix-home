@@ -8,6 +8,7 @@
     ../programs/helix.nix
     ../programs/oh-my-posh.nix
     ../programs/zsh.nix
+    ../programs/kitty.nix
     # ./programs/ags.nix
     # ./programs/vscode.nix
   ];
@@ -51,8 +52,6 @@
       fastfetch
 
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-      alacritty
-      telegram-desktop
     ];
   };
 
