@@ -3,7 +3,7 @@
     enable = true;
     # useTheme = "gruvbox";
 
-    enableBashIntegration = true;
+    # enableBashIntegration = true;
     enableZshIntegration = true;
 
     settings = builtins.fromJSON (builtins.readFile ./oh-my-posh-theme.jsonc);

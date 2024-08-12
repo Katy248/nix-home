@@ -31,6 +31,41 @@
             "branch_icon": "",
             "style": "full"
           }
+        },
+        {
+          "type": "go",
+          "foreground_templates": [
+            "{{ if .Error}}red{{ end }}",
+            "lightBlue"
+          ],
+          "template": "  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "dotnet",
+          "template": "  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground_templates": [
+            "{{ if .Error}}red{{ end }}",
+            "magenta"
+          ]
+        },
+        {
+          "type": "lua",
+          "template": "  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground_templates": [
+            "lightBlue"
+          ]
+        },
+        {
+          "type": "project",
+          "foreground": "cyan"
+        },
+        {
+          "type": "gravatar",
+          "template": "{{ if .Error }}{{ .Error }}{{else}} {{ .Avatar }}{{ .Email }}{{ end }}",
+          "properties": {
+            "size": 15,
+            "email": "petrovanton247@gmail.com"
+          }
         }
       ]
     },
