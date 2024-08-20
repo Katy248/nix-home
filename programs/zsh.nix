@@ -19,6 +19,7 @@
         "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
       cat = "bat --theme gruvbox-dark --paging never --number";
       docker = "sudo docker";
+      # sudo = "gum input --password --prompt \"Пароль: \" --placeholder \"admin123!!!\" --no-show-help | sudo -S";
     };
   };
 }

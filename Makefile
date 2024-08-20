@@ -29,10 +29,10 @@ help:
 	@echo "\`upgrade\` to upgrade home-manager"
 	@echo "\`gc\` to clear all orphans"
 
-gc: clear-flatpak
+gc: clean-flatpak
 	@home-manager expire-generations -2days
 	@nix-env --delete-generations 2d
 	@nix-store --gc	
 
-clear-flatpak:
+clean-flatpak:
 	flatpak uninstall --unused -y
