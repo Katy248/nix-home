@@ -21,5 +21,11 @@
       docker = "sudo docker";
       zed = "~/.local/bin/zed";
     };
+
+    enableCompletion = true;
+    initExtraBeforeCompInit = ''
+      bindsym ^k up-line-or-beginning-search
+      bindsym ^j down-line-or-beginning-search
+    '';
   };
 }

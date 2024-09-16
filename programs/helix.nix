@@ -38,6 +38,14 @@
           right = [ "version-control" "workspace-diagnostics" "position" ];
         };
       };
+      keys = {
+        normal = {
+          space ={
+            q = ":quit";
+            w = ":write";
+          };
+        };
+      };
     };
   };
 }
