@@ -10,7 +10,7 @@
       enableBashIntegration = true;
       enableFishIntegration = true;
     };
-    themeFile = "Gruvbox Dark";
+    themeFile = "GruvboxMaterialDarkMedium";
     settings = {
       disable_ligatures = "never";
       background_opacity = "0.9";
