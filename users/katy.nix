@@ -48,6 +48,7 @@
       omnisharp-roslyn
       just
       nixfmt # language servers
+      lazygit
 
       fastfetch
 
