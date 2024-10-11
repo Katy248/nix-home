@@ -17,17 +17,21 @@ install:
 	@nix-channel --update
 	@nix-shell '<home-manager>' -A install
 
+FEATURES_FLAGS := --extra-experimental-features nix-command --extra-experimental-features flakes
+
+
 upgrade:
 	@nix-channel --update
 	@nix-env --upgrade
-	@nix flake update
-	@home-manager switch
+	@nix flake update $(FEATURES_FLAGS)
+	@home-manager switch $(FEATURES_FLAGS)
 
 help:
 	@echo "Run \`make stow\` to copy all needed files"
 	@echo "\`install\` to install nix and home-manager"
 	@echo "\`upgrade\` to upgrade home-manager"
 	@echo "\`gc\` to clear all orphans"
+	@echo "\`help\` to clear all orphans"
 
 gc: clean-flatpak
 	@home-manager expire-generations -2days
