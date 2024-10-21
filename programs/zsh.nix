@@ -24,6 +24,7 @@
 
     enableCompletion = true;
     initExtraBeforeCompInit = ''
+      PATH=$PATH:~/go/bin
     '';
   };
 }
