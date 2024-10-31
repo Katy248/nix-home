@@ -40,7 +40,7 @@
       };
       keys = {
         normal = {
-          space ={
+          space = {
             q = ":quit";
             w = ":write";
           };
