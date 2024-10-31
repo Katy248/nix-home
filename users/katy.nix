@@ -20,20 +20,6 @@
     username = "katy";
     homeDirectory = "/home/katy";
     stateVersion = "24.11";
-    language = let
-      russian = "ru_RU.UTF-8";
-      english = "en_US.UTF-8";
-    in {
-      base = english;
-      # messages = russian;
-      measurement = russian;
-      monetary = russian;
-      # name = russian;
-      numeric = russian;
-      paper = russian;
-      # telephone = russian;
-      time = russian;
-    };
     sessionVariables = { };
     packages = with pkgs; [
       gh
