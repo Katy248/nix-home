@@ -3,6 +3,7 @@
     enable = true;
     font = {
       name = "JetBrainsMonoNF";
+      # name = "CaskaydiaMono";
       size = 12;
     };
     shellIntegration = {

@@ -5,7 +5,7 @@
   imports = [
     ../programs/alacritty.nix
     ../programs/git.nix
-    ../programs/helix.nix
+    # ../programs/helix.nix
     ../programs/oh-my-posh.nix
     ../programs/zsh.nix
     ../programs/kitty.nix
@@ -20,38 +20,24 @@
     username = "katy";
     homeDirectory = "/home/katy";
     stateVersion = "24.11";
-    sessionVariables = { };
+    sessionVariables = { EDITOR = "lvim"; };
     packages = with pkgs; [
       gh
       bat # better cat
       eza # better ls
       figlet # write big ascii text
-
-      # pandoc texliveFull # documents
-
-      nil
+      nil # nix language server
       marksman
       omnisharp-roslyn
       just
-      nixfmt # language servers
-      lazygit
-
+      nixfmt-classic # nix formatter
+      lazygit # git tui
+      shfmt # shell formatter
       fastfetch
 
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      (nerdfonts.override { fonts = [ "JetBrainsMono" "CascadiaCode" ]; })
     ];
   };
 
-  programs = {
-
-    home-manager.enable = true;
-
-    gnome-shell = {
-      enable = true;
-      # extensions = with pkgs.gnomeExtensions; [
-      #  dash-to-panel
-      # ];
-    };
-
-  };
+  programs.home-manager.enable = true;
 }
