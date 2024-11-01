@@ -1,15 +1,11 @@
-{ inputs, config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-
   imports = [
-    # ./programs/alacritty.nix
     ../programs/git.nix
     ../programs/helix.nix
     ../programs/oh-my-posh.nix
     ../programs/zsh.nix
-    # ./programs/ags.nix
-    # ./programs/vscode.nix
   ];
   nix = {
     package = pkgs.nix;

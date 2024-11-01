@@ -1,11 +1,7 @@
-{ config, pkgs, ... }: {
+{ ... }: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = with pkgs;
-      [
-        # nil marksman omnisharp-roslyn # language servers
-      ];
     settings = {
       theme = "gruvbox";
       editor = {
