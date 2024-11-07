@@ -5,18 +5,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # add ags
-    ags.url = "github:Aylur/ags";
   };
 
   outputs = { home-manager, nixpkgs, ... }@inputs:
     let
-      system = "x86_64-linux";
-
       configFromUsername = username:
         home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = let system = "x86_64-linux";
+          in import nixpkgs { inherit system; };
           extraSpecialArgs = { inherit inputs; };
           modules = [ ./users/${username}.nix ];
         };
