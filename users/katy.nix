@@ -35,8 +35,20 @@
       shfmt # shell formatter
       fastfetch
 
-      (nerdfonts.override { fonts = [ "JetBrainsMono" "CascadiaCode" ]; })
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      jetbrains-mono
     ];
+  };
+  fonts.fontconfig.enable = true;
+  editorconfig = {
+    enable = true;
+    settings = {
+      "*" = {
+        charset = "utf-8";
+        end_of_line = "lf";
+        indent_size = 4;
+      };
+    };
   };
 
   programs.home-manager.enable = true;
