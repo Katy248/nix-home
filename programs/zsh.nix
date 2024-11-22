@@ -21,12 +21,13 @@
       docker = "sudo docker";
       # zed = "~/.local/bin/zed";
       # lvim = "~/.local/bin/lvim";
+      dnfi = "sudo dnf install";
+      dnfs = "dnf search";
+      dnfr = "sudo dnf remove";
     };
 
     enableCompletion = true;
-    initExtraBeforeCompInit = 
-    ''
-      PATH=$PATH:~/go/bin
+    initExtraBeforeCompInit = ''
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
     '';
   };
