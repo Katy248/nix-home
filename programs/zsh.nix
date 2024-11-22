@@ -35,7 +35,7 @@ in {
     initExtraBeforeCompInit = ''
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
     '' + lib.concatMapStrings (p: ''
-      PATH+=(${p})
+      PATH+=":${p}"
     '') additionalPath;
   };
   home.sessionPath = additionalPath;
