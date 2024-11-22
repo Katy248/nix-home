@@ -1,4 +1,6 @@
-{ ... }: {
+{ lib, ... }:
+let additionalPath = [ "$HOME/.local/bin/" "$HOME/go/bin/" ];
+in {
   programs.zsh = {
     enable = true;
     antidote = { enable = true; };
@@ -9,6 +11,7 @@
       ignoreSpace = true;
       share = true;
       size = 5000;
+      path = "$HOME/.cache/zsh-history";
     };
     oh-my-zsh = {
       enable = true;
@@ -24,11 +27,16 @@
       dnfi = "sudo dnf install";
       dnfs = "dnf search";
       dnfr = "sudo dnf remove";
+      dnfu = "sudo dnf upgrade";
     };
+    syntaxHighlighting = { enable = true; };
 
     enableCompletion = true;
     initExtraBeforeCompInit = ''
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
-    '';
+    '' + lib.concatMapStrings (p: ''
+      PATH+=(${p})
+    '') additionalPath;
   };
+  home.sessionPath = additionalPath;
 }
