@@ -8,15 +8,15 @@
       "overflow": "hide",
       "segments": [
         {
+          "type": "nix-shell",
+          "template": "󱄅 NIX: ",
+          "foreground": "blue"
+        },
+        {
           "template": "{{if .SSHSession}}<cyan>SSH: </>{{end}}{{if .Root}}<lightRed>{{ .UserName }}</>{{else}}{{.UserName}}{{end}}<white>@</>{{ .HostName }}",
           "style": "plain",
           "type": "session",
           "foreground": "lightWhite"
-        },
-        {
-          "type": "nix-shell",
-          "template": "󱄅 NIX: ",
-          "foreground": "blue"
         },
         {
           "type": "path",
