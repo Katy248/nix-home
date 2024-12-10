@@ -34,9 +34,9 @@
       lazygit # git tui
       shfmt # shell formatter
       fastfetch
-
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-      jetbrains-mono
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.caskaydia-cove
+      # nerd-fonts.caskaydia-mono
     ];
   };
   fonts.fontconfig.enable = true;
