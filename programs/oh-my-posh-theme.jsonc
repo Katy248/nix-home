@@ -69,6 +69,14 @@
                     "foreground": "cyan"
                 },
                 {
+                    "type": "docker",
+                    "template": "  {{ .Context }}"
+                },
+                {
+                    "type": "python",
+                    "template": "  {{ .Full }}"
+                },
+                {
                     "type": "gravatar",
                     "template": "{{ if .Error }}{{ .Error }}{{else}} {{ .Avatar }}{{ .Email }}{{ end }}",
                     "properties": {
