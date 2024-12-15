@@ -1,5 +1,10 @@
 { lib, ... }:
-let additionalPath = [ "$HOME/.local/bin/" "$HOME/go/bin/" ];
+let
+  additionalPaths = [ "$HOME/.local/bin/" "$HOME/go/bin/" ];
+  printAddPath = path: ''
+    PATH+=":${path}"
+  '';
+  printAdditionalPaths = paths: lib.concatMapStrings printAddPath paths;
 in {
   programs.zsh = {
     enable = true;
@@ -21,9 +26,6 @@ in {
       ls =
         "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
       cat = "bat --theme gruvbox-dark --paging never --number";
-      docker = "sudo docker";
-      # zed = "~/.local/bin/zed";
-      # lvim = "~/.local/bin/lvim";
       dnfi = "sudo dnf install";
       dnfs = "dnf search";
       dnfr = "sudo dnf remove";
@@ -34,9 +36,7 @@ in {
     enableCompletion = true;
     initExtraBeforeCompInit = ''
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
-    '' + lib.concatMapStrings (p: ''
-      PATH+=":${p}"
-    '') additionalPath;
+    '' + printAdditionalPaths additionalPaths;
   };
-  home.sessionPath = additionalPath;
+  home.sessionPath = additionalPaths;
 }
