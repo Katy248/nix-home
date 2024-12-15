@@ -42,12 +42,16 @@
   fonts.fontconfig.enable = true;
   editorconfig = {
     enable = true;
-    settings = {
+    settings = let indent2 = { indent_size = 2; };
+    in {
       "*" = {
         charset = "utf-8";
         end_of_line = "lf";
         indent_size = 4;
       };
+      "*.yml" = indent2;
+      "*.json" = indent2;
+      "*.xml" = indent2;
     };
   };
 
