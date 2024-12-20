@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "Caskaydia Cove Nerd Font";
       # name = "CaskaydiaMono";
       size = 12;
     };
