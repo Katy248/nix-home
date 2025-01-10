@@ -12,6 +12,7 @@
     ../programs/oh-my-posh.nix
     ../programs/zsh.nix
     ../programs/kitty.nix
+    ../programs/eza.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -25,7 +26,6 @@
     packages = with pkgs; [
       gh
       bat # better cat
-      eza # better ls
       figlet # write big ascii text
       nil # nix language server
       marksman
