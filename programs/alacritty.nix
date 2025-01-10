@@ -1,4 +1,4 @@
-{ ... }: {
+{ font, ... }: {
   programs.alacritty = {
     enable = true;
     settings = {
@@ -18,8 +18,8 @@
         blur = true;
       };
       font = {
-        size = 11;
-        normal.family = "JetBrainsMonoNF";
+        size = font.monospace.size;
+        normal.family = font.monospace.name;
       };
       colors = {
         primary = {

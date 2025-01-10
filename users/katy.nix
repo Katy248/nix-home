@@ -1,4 +1,11 @@
 { pkgs, ... }: {
+  _module.args.font = {
+    monospace = {
+      name = "Caskaydia Cove Nerd Font";
+      size = 12;
+    };
+  };
+
   imports = [
     ../programs/alacritty.nix
     ../programs/git.nix
