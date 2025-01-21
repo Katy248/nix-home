@@ -23,8 +23,8 @@ in {
       plugins = [ "git" "sudo" ];
     };
     shellAliases = {
-      ls =
-        "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
+      # ls =
+      #   "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
       cat = "bat --theme gruvbox-dark --paging never --number";
       dnfi = "sudo dnf install";
       dnfs = "dnf search";
@@ -34,7 +34,8 @@ in {
     syntaxHighlighting = { enable = true; };
 
     enableCompletion = true;
-    initExtraBeforeCompInit = ''
+    initExtra = ''
+      bindkey -v
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
     '' + printAdditionalPaths additionalPaths;
   };
