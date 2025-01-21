@@ -6,6 +6,9 @@
     ../programs/helix.nix
     ../programs/oh-my-posh.nix
     ../programs/zsh.nix
+    ../programs/eza.nix
+    ../programs/bat.nix
+    ../programs/fastfetch.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -18,14 +21,10 @@
     sessionVariables = { };
     packages = with pkgs; [
       gh
-      bat # better cat
-      eza # better ls
       nil
       marksman
       just
       nixfmt # language servers
-
-      fastfetch
     ];
   };
 
