@@ -15,6 +15,7 @@
     ../programs/eza.nix
     ../programs/bat.nix
     ../programs/fastfetch.nix
+    ../programs/lazygit.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -33,7 +34,6 @@
       omnisharp-roslyn
       just
       nixfmt-classic # nix formatter
-      lazygit # git tui
       shfmt # shell formatter
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
