@@ -25,7 +25,7 @@ in {
     shellAliases = {
       # ls =
       #   "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
-      cat = "bat --theme gruvbox-dark --paging never --number";
+      cat = "bat";
       dnfi = "sudo dnf install";
       dnfs = "dnf search";
       dnfr = "sudo dnf remove";

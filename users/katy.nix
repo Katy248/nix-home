@@ -13,6 +13,7 @@
     ../programs/zsh.nix
     ../programs/kitty.nix
     ../programs/eza.nix
+    ../programs/bat.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -25,7 +26,6 @@
     sessionVariables = { EDITOR = "lvim"; };
     packages = with pkgs; [
       gh
-      bat # better cat
       figlet # write big ascii text
       nil # nix language server
       marksman
