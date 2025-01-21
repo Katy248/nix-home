@@ -14,6 +14,7 @@
     ../programs/kitty.nix
     ../programs/eza.nix
     ../programs/bat.nix
+    ../programs/fastfetch.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -34,7 +35,6 @@
       nixfmt-classic # nix formatter
       lazygit # git tui
       shfmt # shell formatter
-      fastfetch
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
     ];

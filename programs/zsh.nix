@@ -30,6 +30,7 @@ in {
       dnfs = "dnf search";
       dnfr = "sudo dnf remove";
       dnfu = "sudo dnf upgrade";
+      neofetch = "fastfetch";
     };
     syntaxHighlighting = { enable = true; };
 
