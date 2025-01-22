@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  additionalPaths = [ "$HOME/.local/bin/" "$HOME/go/bin/" ];
+  additionalPaths = [ "$HOME/.local/bin/" "$HOME/go/bin/" "$HOME/.cargo/bin/" ];
   printAddPath = path: ''
     PATH+=":${path}"
   '';
