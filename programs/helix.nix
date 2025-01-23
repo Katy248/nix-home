@@ -1,7 +1,7 @@
 { ... }: {
   programs.helix = {
     enable = true;
-    defaultEditor = true;
+    # defaultEditor = true;
     settings = {
       theme = "gruvbox";
       editor = {
