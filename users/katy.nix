@@ -21,6 +21,18 @@
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
+  dconf.settings = {
+    "org/gnome/mutter" = {
+      center-new-window = true;
+      attach-modal-dialogs = true;
+    };
+    "org/gnome/desktop/wm/keybindings" = {
+      switch-input-source = [ "<Super>Space" "<Shift>Alt_L" "<Shift>Alt_R" ];
+      toggle-maximized = [ "<Super>Up" "<Super>f" ];
+      toggle-fullscreen = [ "<Super><Shift>f" ];
+      close = [ "<Alt>F4" "<Super>q" ];
+    };
+  };
   home = {
     username = "katy";
     homeDirectory = "/home/katy";
