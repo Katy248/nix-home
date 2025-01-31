@@ -49,6 +49,9 @@
       shfmt # shell formatter
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
+      go
+      gopls
+      neovim
     ];
   };
   fonts.fontconfig.enable = true;
