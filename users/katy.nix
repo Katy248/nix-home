@@ -16,6 +16,7 @@
     ../programs/bat.nix
     ../programs/fastfetch.nix
     ../programs/lazygit.nix
+    ../programs/neovim.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -51,7 +52,6 @@
       nerd-fonts.caskaydia-cove
       go
       gopls
-      neovim
     ];
   };
   fonts.fontconfig.enable = true;

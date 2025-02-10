@@ -4,7 +4,7 @@ let
   printAddPath = path: ''
     PATH+=":${path}"
   '';
-  printAdditionalPaths = paths: lib.concatMapStrings printAddPath paths;
+  printAdditionalPaths = paths: lib.concatMapStrings (printAddPath paths);
 in {
   programs.zsh = {
     enable = true;
@@ -31,6 +31,7 @@ in {
       dnfr = "sudo dnf remove";
       dnfu = "sudo dnf upgrade";
       neofetch = "fastfetch";
+      ff = "fastfetch";
     };
     syntaxHighlighting = { enable = true; };
 
@@ -38,7 +39,7 @@ in {
     initExtra = ''
       bindkey -v
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
-    '' + printAdditionalPaths additionalPaths;
+    '' + printAdditionalPaths (additionalPaths);
   };
   home.sessionPath = additionalPaths;
 }
