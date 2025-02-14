@@ -4,7 +4,7 @@ let
   printAddPath = path: ''
     PATH+=":${path}"
   '';
-  printAdditionalPaths = paths: lib.concatMapStrings (printAddPath paths);
+  printAdditionalPaths = paths: lib.concatMapStrings printAddPath paths;
 in {
   programs.zsh = {
     enable = true;
