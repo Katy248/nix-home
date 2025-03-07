@@ -8,6 +8,7 @@
       ksc = {
         uri = "git@github.com:Katy248/ksc.git";
         path = "${HOME}/src/ksc";
+
       };
       neovim = {
         uri = "git@gitlab.com:configs505752/neovim-config.git";
