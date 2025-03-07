@@ -17,6 +17,7 @@
     ../programs/fastfetch.nix
     ../programs/lazygit.nix
     ../programs/neovim.nix
+    ../programs/git-sync.nix
   ];
   nix = {
     package = pkgs.nix;
@@ -50,9 +51,18 @@
       shfmt # shell formatter
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
-      go
       gopls
     ];
+    shell = {
+      enableShellIntegration = true;
+      enableZshIntegration = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+    };
+  };
+  programs.go = {
+    enable = true;
+    telemetry.mode = "off";
   };
   fonts.fontconfig.enable = true;
   editorconfig = {
