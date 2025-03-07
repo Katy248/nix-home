@@ -3,7 +3,7 @@
     enable = true;
     repositories = let
       HOME = config.home.homeDirectory;
-      defaultSyncTimeout = 3600 * 3;
+      #   defaultSyncTimeout = 3600 * 3;
     in {
       ksc = {
         uri = "git@github.com:Katy248/ksc.git";
