@@ -1,6 +1,7 @@
 { config, ... }: {
   services.git-sync = {
     enable = false;
+
     repositories = let
       HOME = config.home.homeDirectory;
       defaultSyncInterval = 3600 * 3;
