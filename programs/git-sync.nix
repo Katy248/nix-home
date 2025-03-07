@@ -13,10 +13,12 @@
       neovim = {
         uri = "git@gitlab.com:configs505752/neovim-config.git";
         path = "${HOME}/.config/nvim";
+        interval = defaultSyncInterval;
       };
       home-manager = {
         uri = "git@github.com:Katy248/nix-home.git";
         path = "${HOME}/src/nix-home";
+        interval = defaultSyncInterval;
       };
     };
   };
