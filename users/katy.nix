@@ -11,6 +11,7 @@
     ../programs/git.nix
     ../programs/oh-my-posh.nix
     ../programs/zsh.nix
+    ../programs/ghostty.nix
     ../programs/kitty.nix
     ../programs/eza.nix
     ../programs/bat.nix
