@@ -2,7 +2,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      shell = "zsh";
+      terminal.shell = "zsh";
       cursor.style = {
         blinking = "On";
         shape = "Beam";
