@@ -42,6 +42,7 @@
     stateVersion = "24.11";
     sessionVariables = { EDITOR = "lvim"; };
     packages = with pkgs; [
+      nixgl.auto.nixGLDefault
       gh
       figlet # write big ascii text
       nil # nix language server
