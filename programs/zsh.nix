@@ -41,7 +41,7 @@ in {
     syntaxHighlighting = { enable = true; };
 
     enableCompletion = true;
-    initExtra = ''
+    initContent = ''
       bindkey -v
       source /home/katy/.nix-profile/etc/profile.d/nix.sh
     '' + printAdditionalPaths (additionalPaths);
