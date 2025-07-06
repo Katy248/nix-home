@@ -15,13 +15,14 @@ install:
 	@nix-shell '<home-manager>' -A install
 
 FEATURES_FLAGS := --extra-experimental-features nix-command --extra-experimental-features flakes
+EXPORTS := NIXPKGS_ALLOW_UNFREE=1
 
 
 upgrade:
 	@nix-channel --update
 	@nix-env --upgrade
 	@nix flake update $(FEATURES_FLAGS)
-	@home-manager switch --impure $(FEATURES_FLAGS)
+	@$(EXPORTS) home-manager switch --impure $(FEATURES_FLAGS)
 
 help:
 	@echo "Run \`make stow\` to copy all needed files"
