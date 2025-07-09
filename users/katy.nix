@@ -7,6 +7,8 @@
   };
 
   imports = [
+    ../hm-base.nix
+
     ../programs/alacritty.nix
     ../programs/git.nix
     ../programs/oh-my-posh.nix
@@ -20,10 +22,6 @@
     ../programs/neovim.nix
     ../programs/git-sync.nix
   ];
-  nix = {
-    package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
-  };
   dconf.settings = {
     "org/gnome/mutter" = {
       center-new-window = true;
@@ -39,7 +37,6 @@
   home = {
     username = "katy";
     homeDirectory = "/home/katy";
-    stateVersion = "24.11";
     sessionVariables = { EDITOR = "lvim"; };
     packages = with pkgs; [
       nixgl.auto.nixGLDefault
@@ -55,12 +52,6 @@
       nerd-fonts.caskaydia-cove
       gopls
     ];
-    shell = {
-      enableShellIntegration = true;
-      enableZshIntegration = true;
-      enableBashIntegration = true;
-      enableFishIntegration = true;
-    };
   };
   programs.go = {
     enable = true;
@@ -82,5 +73,4 @@
     };
   };
 
-  programs.home-manager.enable = true;
 }
