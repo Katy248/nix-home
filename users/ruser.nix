@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../hm-base.nix
+    ./user-base.nix
 
     ../programs/git.nix
     ../programs/helix.nix

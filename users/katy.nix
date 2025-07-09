@@ -7,7 +7,7 @@
   };
 
   imports = [
-    ../hm-base.nix
+    ./user-base.nix
 
     ../programs/alacritty.nix
     ../programs/git.nix
