@@ -11,10 +11,11 @@
     icons = "always";
     extraOptions = [
       "--tree"
-      "--level=1"
-      "--all"
+      "--level"
+      "0"
       "--group-directories-first"
-      "--ignore-glob=.git"
+      "--ignore-glob"
+      ".git"
     ];
   };
 }
