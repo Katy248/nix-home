@@ -12,7 +12,7 @@
     extraOptions = [
       "--tree"
       "--level"
-      "0"
+      "1"
       "--group-directories-first"
       "--ignore-glob"
       ".git"
