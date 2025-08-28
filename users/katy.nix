@@ -37,7 +37,10 @@
   home = {
     username = "katy";
     homeDirectory = "/home/katy";
-    sessionVariables = { EDITOR = "lvim"; };
+    sessionVariables = {
+      EDITOR = "nvim";
+      VISUAL = "gnome-text-editor";
+    };
     packages = with pkgs; [
       #   nixgl.auto.nixGLDefault
       gh
