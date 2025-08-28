@@ -39,7 +39,7 @@
     homeDirectory = "/home/katy";
     sessionVariables = { EDITOR = "lvim"; };
     packages = with pkgs; [
-      nixgl.auto.nixGLDefault
+      #   nixgl.auto.nixGLDefault
       gh
       figlet # write big ascii text
       nil # nix language server

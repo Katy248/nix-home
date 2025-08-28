@@ -5,6 +5,7 @@ let
     "$HOME/go/bin/"
     "$HOME/.cargo/bin/"
     "$HOME/.dotnet/tools"
+    "$HOME/.docker/completions"
   ];
   printAddPath = path: ''
     PATH+=":${path}"

@@ -13,6 +13,7 @@ install:
 	@nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 	@nix-channel --update
 	@nix-shell '<home-manager>' -A install
+	@nix-env -i nixGL
 
 FEATURES_FLAGS := --extra-experimental-features nix-command --extra-experimental-features flakes
 EXPORTS := NIXPKGS_ALLOW_UNFREE=1
