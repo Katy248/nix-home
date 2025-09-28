@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       gui = {
-        language = "ru";
+        language = "en"; # currently no russian
         border = "rounded";
       };
     };
