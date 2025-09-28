@@ -10,17 +10,18 @@
     ./user-base.nix
 
     ../programs/alacritty.nix
-    ../programs/git.nix
-    ../programs/oh-my-posh.nix
-    ../programs/zsh.nix
-    ../programs/ghostty.nix
-    ../programs/kitty.nix
-    ../programs/eza.nix
     ../programs/bat.nix
+    ../programs/eza.nix
     ../programs/fastfetch.nix
+    ../programs/ghostty.nix
+    ../programs/git-sync.nix
+    ../programs/git.nix
+    ../programs/kitty.nix
+    ../programs/lazydocker.nix
     ../programs/lazygit.nix
     ../programs/neovim.nix
-    ../programs/git-sync.nix
+    ../programs/oh-my-posh.nix
+    ../programs/zsh.nix
   ];
   dconf.settings = {
     "org/gnome/mutter" = {
