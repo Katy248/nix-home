@@ -26,7 +26,7 @@ in {
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" "cheatsheet" ];
+      plugins = [ "colored-man-pages" "git" "sudo" ];
     };
     shellAliases = {
       clone = "git clone";
@@ -49,7 +49,6 @@ in {
     enableCompletion = true;
     initContent = ''
       bindkey -v
-      source /home/katy/.nix-profile/etc/profile.d/nix.sh
     '' + printAdditionalPaths (additionalPaths);
   };
   home.sessionPath = additionalPaths;
