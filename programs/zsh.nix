@@ -26,18 +26,23 @@ in {
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" ];
+      plugins = [ "git" "sudo" "cheatsheet" ];
     };
     shellAliases = {
-      # ls =
-      #   "eza --tree --level=1 --icons=always --color=always --all --group-directories-first --ignore-glob .git";
+      clone = "git clone";
       cat = "bat";
+      neofetch = "fastfetch";
+      ff = "fastfetch";
+      # dnf aliases
       dnfi = "sudo dnf install";
       dnfs = "dnf search";
       dnfr = "sudo dnf remove";
       dnfu = "sudo dnf upgrade";
-      neofetch = "fastfetch";
-      ff = "fastfetch";
+      # pacman aliases
+      paci = "sudo pacman -S";
+      pacr = "sudo pacman -Rsu";
+      pacs = "pacman -Ss";
+      pacu = "sudo pacman -Syu";
     };
     syntaxHighlighting = { enable = true; };
 
