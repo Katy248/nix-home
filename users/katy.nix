@@ -14,7 +14,6 @@
     ../programs/eza.nix
     ../programs/fastfetch.nix
     ../programs/ghostty.nix
-    ../programs/git-sync.nix
     ../programs/git.nix
     ../programs/kitty.nix
     ../programs/lazydocker.nix
@@ -47,14 +46,13 @@
       gh
       figlet # write big ascii text
       nil # nix language server
-      marksman
-      omnisharp-roslyn
+      # omnisharp-roslyn
       just
       nixfmt-classic # nix formatter
-      shfmt # shell formatter
+      # shfmt # shell formatter
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
-      gopls
+      # gopls
     ];
   };
   programs.go = {
