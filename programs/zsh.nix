@@ -49,7 +49,9 @@ in {
     enableCompletion = true;
     initContent = ''
       bindkey -v
-    '' + printAdditionalPaths (additionalPaths);
+    '' + printAdditionalPaths (additionalPaths) + ''
+      . /home/katy/.nix-profile/etc/profile.d/nix.sh
+    '';
   };
   home.sessionPath = additionalPaths;
 }
