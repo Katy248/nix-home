@@ -32,10 +32,7 @@ help:
 	@echo "\`gc\` to clear all orphans"
 	@echo "\`help\` to clear all orphans"
 
-gc: clean-flatpak
-	@home-manager expire-generations -2days
+gc: 
+	@home-manager expire-generations -1minutes
 	@nix-env --delete-generations 2d
 	@nix-store --gc	
-
-clean-flatpak:
-	flatpak uninstall --unused -y
