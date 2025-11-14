@@ -2,7 +2,7 @@
   programs.git = {
     enable = true;
     settings = {
-      user.ame = "Katy248";
+      user.name = "Katy248";
       user.email = "petrovanton247@gmail.com";
       init = { defaultbranch = "main"; };
     };
