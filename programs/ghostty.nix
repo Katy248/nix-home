@@ -11,7 +11,7 @@
 
     settings = {
       font-family = font.monospace.name;
-      theme = "light:GruvboxLight,dark:GruvboxDark";
+      theme = "light:Gruvbox Light,dark:Gruvbox Dark";
       background-opacity = 0.9;
       background-blur = true;
       window-padding-x = 10;
