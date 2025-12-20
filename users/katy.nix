@@ -44,6 +44,7 @@
     packages = with pkgs; [
       #   nixgl.auto.nixGLDefault
       gh
+      fortune
       figlet # write big ascii text
       nil # nix language server
       # omnisharp-roslyn

@@ -50,7 +50,10 @@ in {
     initContent = ''
       bindkey -v
     '' + printAdditionalPaths (additionalPaths) + ''
-      . /home/katy/.nix-profile/etc/profile.d/nix.sh
+
+      fortune /usr/share/fortune/katy-songs
+      echo ""
+      echo ""
     '';
   };
   home.sessionPath = additionalPaths;
