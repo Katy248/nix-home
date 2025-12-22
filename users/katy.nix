@@ -10,6 +10,7 @@
     ./user-base.nix
 
     ../programs/alacritty.nix
+    ../programs/bash.nix
     ../programs/bat.nix
     ../programs/eza.nix
     ../programs/fastfetch.nix
@@ -42,6 +43,7 @@
       VISUAL = "gnome-text-editor";
     };
     packages = with pkgs; [
+
       #   nixgl.auto.nixGLDefault
       gh
       fortune
@@ -54,6 +56,8 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
       # gopls
+
+      luajitPackages.lua-lsp
     ];
   };
   programs.go = {
