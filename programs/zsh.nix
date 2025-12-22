@@ -6,6 +6,7 @@ let
     "$HOME/.cargo/bin/"
     "$HOME/.dotnet/tools"
     "$HOME/.docker/completions"
+    "$HOME/.dotnet"
   ];
   printAddPath = path: ''
     PATH+=":${path}"
@@ -16,10 +17,12 @@ in {
     enable = true;
     antidote = { enable = true; };
     autosuggestion = { enable = true; };
+    enableVteIntegration = true;
     history = {
       ignoreAllDups = true;
       ignoreDups = true;
       ignoreSpace = true;
+      saveNoDups = true;
       share = true;
       size = 5000;
       path = "$HOME/.cache/zsh-history";
