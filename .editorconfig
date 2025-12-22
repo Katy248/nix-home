@@ -2,3 +2,6 @@ root = true
 [*.nix]
 indent_style = space
 indent_size = 2
+[*.{json,jsonc}]
+indent_style = space
+indent_size = 2
