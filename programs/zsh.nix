@@ -54,6 +54,9 @@ in {
       bindkey -v
     '' + printAdditionalPaths (additionalPaths) + ''
 
+      . /home/katy/.nix-profile/etc/profile.d/nix.sh
+
+      echo ""
       fortune /usr/share/fortune/katy-songs
       echo ""
       echo ""

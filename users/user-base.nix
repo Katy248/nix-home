@@ -4,7 +4,8 @@
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
   home = {
-    stateVersion = "25.05";
+    stateVersion = "26.05";
+    enableNixpkgsReleaseCheck = true;
     shell = {
       enableShellIntegration = true;
       enableZshIntegration = true;
