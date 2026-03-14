@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   _module.args.font = {
     monospace = {
       name = "Caskaydia Cove Nerd Font";
@@ -29,10 +30,20 @@
       attach-modal-dialogs = true;
     };
     "org/gnome/desktop/wm/keybindings" = {
-      switch-input-source = [ "<Super>Space" "<Shift>Alt_L" "<Shift>Alt_R" ];
-      toggle-maximized = [ "<Super>Up" "<Super>f" ];
+      switch-input-source = [
+        "<Super>Space"
+        "<Shift>Alt_L"
+        "<Shift>Alt_R"
+      ];
+      toggle-maximized = [
+        "<Super>Up"
+        "<Super>f"
+      ];
       toggle-fullscreen = [ "<Super><Shift>f" ];
-      close = [ "<Alt>F4" "<Super>q" ];
+      close = [
+        "<Alt>F4"
+        "<Super>q"
+      ];
     };
   };
   home = {
@@ -61,23 +72,28 @@
     ];
   };
   programs.go = {
-    enable = true;
+    enable = false;
     telemetry.mode = "off";
   };
   fonts.fontconfig.enable = true;
   editorconfig = {
     enable = true;
-    settings = let indent2 = { indent_size = 2; };
-    in {
-      "*" = {
-        charset = "utf-8";
-        end_of_line = "lf";
-        indent_size = 4;
+    settings =
+      let
+        indent2 = {
+          indent_size = 2;
+        };
+      in
+      {
+        "*" = {
+          charset = "utf-8";
+          end_of_line = "lf";
+          indent_size = 4;
+        };
+        "*.yml" = indent2;
+        "*.json" = indent2;
+        "*.xml" = indent2;
       };
-      "*.yml" = indent2;
-      "*.json" = indent2;
-      "*.xml" = indent2;
-    };
   };
 
 }

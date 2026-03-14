@@ -12,11 +12,16 @@ let
     PATH+=":${path}"
   '';
   printAdditionalPaths = paths: lib.concatMapStrings printAddPath paths;
-in {
+in
+{
   programs.zsh = {
     enable = true;
-    antidote = { enable = true; };
-    autosuggestion = { enable = true; };
+    antidote = {
+      enable = true;
+    };
+    autosuggestion = {
+      enable = true;
+    };
     enableVteIntegration = true;
     history = {
       ignoreAllDups = true;
@@ -29,7 +34,11 @@ in {
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [ "colored-man-pages" "git" "sudo" ];
+      plugins = [
+        "colored-man-pages"
+        "git"
+        "sudo"
+      ];
     };
     shellAliases = {
       clone = "git clone";
@@ -47,14 +56,22 @@ in {
       pacs = "pacman -Ss";
       pacu = "sudo pacman -Syu";
     };
-    syntaxHighlighting = { enable = true; };
+    syntaxHighlighting = {
+      enable = true;
+    };
 
     enableCompletion = true;
     initContent = ''
       bindkey -v
-    '' + printAdditionalPaths (additionalPaths) + ''
+    ''
+    + printAdditionalPaths (additionalPaths)
+    + ''
 
-      . /home/katy/.nix-profile/etc/profile.d/nix.sh
+
+      nixProfile='/home/katy/.nix-profile/etc/profile.d/nix.sh'
+      if [ -a "$(nixProfile)" ]; then
+        . "$(nixProfile)"
+      fi
 
       echo ""
       fortune /usr/share/fortune/katy-songs
