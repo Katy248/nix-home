@@ -66,12 +66,7 @@ in
     ''
     + printAdditionalPaths (additionalPaths)
     + ''
-
-
-      nixProfile='/home/katy/.nix-profile/etc/profile.d/nix.sh'
-      if [ -a "$(nixProfile)" ]; then
-        . "$(nixProfile)"
-      fi
+      . /home/katy/.nix-profile/etc/profile.d/nix.sh
 
       echo ""
       fortune /usr/share/fortune/katy-songs

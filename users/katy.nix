@@ -54,20 +54,18 @@
       VISUAL = "gnome-text-editor";
     };
     packages = with pkgs; [
-
-      #   nixgl.auto.nixGLDefault
       gh
       fortune
       figlet # write big ascii text
-      nil # nix language server
+      # nix language server
+      nil
+      nixd
       # omnisharp-roslyn
       just
-      nixfmt-classic # nix formatter
+      nixfmt # nix formatter
       # shfmt # shell formatter
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
-      # gopls
-
       luajitPackages.lua-lsp
     ];
   };
